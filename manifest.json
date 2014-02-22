@@ -3,12 +3,12 @@
 	"name": "Infinitive-izer",
 	"version": "0.1",
 
-	"default_locale": "en",
+	//"default_locale": "en",
 	"description": "Translation Extension",
-	"icons": {},
+	//"icons": {icon.png},
 
-	"background": {
-		"scripts": [],
-		"persistent": false
-	},
+	"content_scripts": {
+		"matches": [<all_urls>],
+		"js": ["highlight.js", "popup.js"]
+	}	
 }
