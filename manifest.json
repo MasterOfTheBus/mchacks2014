@@ -5,10 +5,18 @@
 
 	//"default_locale": "en",
 	"description": "Translation Extension",
-	"icons": {"icon.png"},
+	//"icons": {"icon.png"},
 
+	"background": {
+		"persistent": false,
+		"scripts": ["query.js"]
+		//"page": "popup.html"
+	},
+	
 	"content_scripts": [{
-		"matches": ["<all_urls>"],
-		"js": ["highlight.js", "popup.js", "query.js"]
-	}]	
+		"matches": ["http://*/*"],
+		"js": ["highlight.js"]//, "popup.js"]
+	}],
+	
+	"permissions": ["http://*/*"]
 }
