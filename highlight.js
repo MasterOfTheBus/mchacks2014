@@ -6,10 +6,10 @@ function selectText() {
 	console.log("text: " + selectedText);
 
 	// Query Translation
-	makePopup();
+	makePopup(selectedText);
 }
 
-function makePopup() {
+function makePopup(selectedText) {
 	// Make the popup -- probably won't work
 	/*
 	var translationGenerator = {
@@ -17,14 +17,19 @@ function makePopup() {
 		var trans = document.createElement('input');
 		document.body.appendChild(trans);
 	}*/
-}
 	
 	// Get the translation
-	getTranslation();
+	getTranslation(selectedText);
 }
 
-function getTranslation() {
+function getTranslation(selectedText) {
+	var language = "#French";
 	// work stuff
+	$.get({ "http://en.wikitionary.org/wiki/" + selectedText + language,
+			function(data) {
+			console.log(data);
+		}
+	}
 	
 	// show the translation
 	showTranslation();

@@ -6,12 +6,6 @@
 	//"default_locale": "en",
 	"description": "Translation Extension",
 	//"icons": {"icon.png"},
-
-	"background": {
-		"persistent": false,
-		"scripts": ["query.js"]
-		//"page": "popup.html"
-	},
 	
 	"content_scripts": [{
 		"matches": ["http://*/*"],
